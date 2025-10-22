@@ -5,9 +5,9 @@ function handleLogin(e) {
     e.preventDefault();
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
-    
+
     // Llamar a la API PHP
-    fetch('http://localhost/ferreteria/api/login.php', {
+    fetch('http://localhost/ferreteria/src/api/login.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

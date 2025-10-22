@@ -14,7 +14,7 @@
 // ==================== CONFIGURACIÓN DE CONEXIÓN ====================
 // TODO: Cambia estos valores según tu configuración local
 define('DB_HOST', 'localhost');        // Generalmente 'localhost' o '127.0.0.1'
-define('DB_USER', 'localhost');             // Usuario de tu MySQL (por defecto 'root' en XAMPP)
+define('DB_USER', 'root');             // Usuario de tu MySQL (por defecto 'root' en XAMPP)
 define('DB_PASS', 'parra');                 // Contraseña de MySQL (vacío por defecto en XAMPP)
 define('DB_NAME', 'ferreteria_db');    // Nombre de la base de datos
 
