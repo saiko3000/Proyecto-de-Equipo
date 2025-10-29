@@ -7,7 +7,7 @@
  * INSTRUCCIONES:
  * 1. Modifica los valores de las constantes con tus datos de conexión
  * 2. Asegúrate de tener instalado XAMPP, WAMP o similar
- * 3. Crea la base de datos 'ferreteria_db' en phpMyAdmin
+ * 3. Crea la base de datos '2' en phpMyAdmin
  * 4. Ejecuta el archivo 'database.sql' para crear las tablas
  */
 
