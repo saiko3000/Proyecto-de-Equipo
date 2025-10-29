@@ -1,10 +1,14 @@
-
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
-  import path from 'path';
+  import path from 'node:path';
+  import { fileURLToPath } from 'node:url';
+
+  const projectRoot = fileURLToPath(new URL('.', import.meta.url));
+  const appRoot = path.resolve(projectRoot, 'src');
 
   export default defineConfig({
     plugins: [react()],
+    root: appRoot,
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -46,12 +50,13 @@
         '@radix-ui/react-aspect-ratio@1.1.2': '@radix-ui/react-aspect-ratio',
         '@radix-ui/react-alert-dialog@1.1.6': '@radix-ui/react-alert-dialog',
         '@radix-ui/react-accordion@1.2.3': '@radix-ui/react-accordion',
-        '@': path.resolve(__dirname, './src'),
+        // Map "@" to the local src directory for cleaner imports.
+        '@': appRoot,
       },
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: path.resolve(projectRoot, 'build'),
     },
     server: {
       port: 3000,
